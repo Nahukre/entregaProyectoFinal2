@@ -32,8 +32,8 @@ function crearUsuario(e) {
     let nombreIngresado = document.getElementById('nombre').value;
     let emailIngresado = document.getElementById('email').value;
     let sueldoIngresado = document.getElementById('sueldo').value;
-    let ahorroIngresado = document.getElementById('ahorro').value;
-    let extraIngresado = document.getElementById('extra').value;
+    let ahorroIngresado = parseInt(document.getElementById('ahorro').value);
+    let extraIngresado = parseInt(document.getElementById('extra').value);
     let objetivoIngresado = document.getElementById('objetivo').value;
     let valorBienIngresado = document.getElementById('valorBien').value;
 
@@ -102,11 +102,11 @@ function crearUsuario(e) {
 
     let contenedorPersona = document.createElement("div");
     contenedorPersona.innerHTML = `<h5>Bienvenido ${usuario.nombre}!</h5>
-                                        <h5>\nSu porcentaje de ahorro mensual es del ${ahorroPorcentaje}%.</h5> 
+                                        <h5>\nSu porcentaje de ahorro mensual es del ${ahorroPorcentaje.toFixed(2)}%.</h5> 
                                         <h5>\nSu ahorro anual es de $${ahorroAnual}.</h5> 
-                                        <h5>\nSi destinara todo su sueldo a comprar su ${usuario.objetivo} tardaría ${mesesDeAhorro} meses o ${sueldoAños} años para comprar lo que desea.</h5> 
-                                        <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal} meses o ${ahorroAños} años para comprar lo que desea.</h5> 
-                                        <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal} años para comprar lo que desea.</h5> 
+                                        <h5>\nSi destinara todo su sueldo a comprar su ${usuario.objetivo} tardaría ${mesesDeAhorro.toFixed(2)} meses o ${sueldoAños.toFixed(2)} años para comprar lo que desea.</h5> 
+                                        <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
+                                        <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
                                         <h5>\nValor del Bien: ${usuario.valorBien}<h5>`;
     document.body.appendChild(contenedorPersona);
 
@@ -118,11 +118,11 @@ function crearUsuario(e) {
 
     let contenedorActivos = document.createElement("div");
     contenedorActivos.innerHTML = `<h5 class="papa">Sus opciones de inversión inmediata son:</h5>
-                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${dolarBlueAhorro} dólares blue.</h5> 
-                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${bitcoinAhorro} bitcoins.</h5> 
-                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${appleAhorro} cedears de Apple.</h5> 
-                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${amazonAhorro} cedears de Amazon.</h5> 
-                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${teslaAhorro} cedears de Tesla.</h5>`;
+                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${dolarBlueAhorro.toFixed(2)} dólares blue.</h5> 
+                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${bitcoinAhorro.toFixed(2)} bitcoins.</h5> 
+                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${appleAhorro.toFixed(2)} cedears de Apple.</h5> 
+                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${amazonAhorro.toFixed(2)} cedears de Amazon.</h5> 
+                                            <h5 class="papa">\nUsted podría comprar con su ahorro mensual ${teslaAhorro.toFixed(2)} cedears de Tesla.</h5>`;
     document.body.appendChild(contenedorActivos);
 
     // Este console.log lo dejaría de usar
