@@ -8,10 +8,24 @@
 $color-verde: #03a00b;
 $color-celeste: #548aff;
 @media only screen and (min-width: 1024px) {
-    .encabezado {
+    .encabezado__index {
         /* esta clase corresponde al encabezado*/
         background-color: $color-verde;
         margin-top: -40px;
+        font-weight: bold;
+        font-family: sans-serif;
+        top: 0;
+        left: 0;
+        z-index: 1010;
+        display: flex;
+        width: 100%;
+        // position: absolute;
+        z-index: 100;
+        text-align: center;
+    }
+    .encabezado {
+        /* esta clase corresponde al encabezado*/
+        background-color: $color-verde;
         font-weight: bold;
         font-family: sans-serif;
         top: 0;
@@ -144,8 +158,8 @@ $color-celeste: #548aff;
         width: 95%;
         grid-template-columns: 33% 33% 33%;
         margin-top: 10px;
-        margin-bottom: 10px;
         margin-left: 2%;
+        padding-bottom: 30px;
     }
     #activo__dolarBlue {
         background-color: rgba(255, 255, 255, 0.5);
@@ -156,10 +170,9 @@ $color-celeste: #548aff;
         border-width: 3px;
         border-color: black;
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
             transition-duration: 0.6s;
             background-color: $color-celeste;
-            margin: auto;
         }
     }
     .dolarBlue__nombre {
@@ -179,10 +192,9 @@ $color-celeste: #548aff;
         border-width: 3px;
         border-color: black;
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
             transition-duration: 0.6s;
             background-color: $color-celeste;
-            margin: auto;
         }
     }
     .cedears__nombre {
@@ -202,10 +214,9 @@ $color-celeste: #548aff;
         border-width: 3px;
         border-color: black;
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
             transition-duration: 0.6s;
             background-color: $color-celeste;
-            margin: auto;
         }
     }
     .bitcoin__nombre {
@@ -244,20 +255,97 @@ $color-celeste: #548aff;
     h2 {
         margin-left: 20px;
     }
-    label {
-        margin-left: 20px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-    }
-    input {
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
     #submitButton {
         margin-left: 20px;
         margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
     }
     .papa {
         font-weight: bold;
+    }
+    label {
+        font-size: 20px;
+        padding: 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+    input {
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+    fieldset {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        padding-bottom: 0px;
+        padding-top: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .motivo {
+        padding-top: 20px;
+    }
+    select {
+        font-size: 12px;
+        border-radius: 5px;
+    }
+    textarea {
+        border-radius: 5px;
+        &:focus {
+            font-size: 16px;
+            border-radius: 5px;
+            transform: translate(20px, 0px);
+            min-width: 510px;
+            min-height: 200px;
+        }
+    }
+    .consulta {
+        vertical-align: super;
+    }
+    .consulta2 {
+        margin-top: 20px;
+    }
+    .botones {
+        font-family: sans-serif;
+        color: black;
+        border: solid;
+        border-color: black;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 2px;
+        &:hover {
+            background-color: $color-celeste;
+            color: black;
+        }
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        line-height: 10px;
+    }
+    .formularioNovedades {
+        margin: 10px;
+        font-size: 20px;
+        padding: 10px;
+    }
+    div.checkbox {
+        margin-left: 0px;
+        font-size: 20px;
+    }
+    .checkbox {
+        display: inline;
+        font-size: 15px;
+        margin-left: -17px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        margin-left: -20px;
+        padding: 2px;
     }
 }

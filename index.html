@@ -19,7 +19,7 @@
 </head>
 
 <body class="pagina">
-    <header class="encabezado">
+    <header class="encabezado__index">
         <div class="encabezado__logo"><img src="img/colchon.png" class="encabezado__logo"></div>
         <!--esta es la imagen del logo-->
         <section class="wow zoomIn" data-wow-delay="0.1s" id="encabezado__fuera">
@@ -90,7 +90,7 @@
                     <input type="email" id="email" />
                 </div>
                 <div class="input-group">
-                    <label>sueldo: </label>
+                    <label>Sueldo: </label>
                     <input type="number" id="sueldo" />
                 </div>
                 <div class="input-group">
@@ -115,16 +115,19 @@
                 </div>
             </form>
         </div>
-        <script src="js/miarchivo.js"></script>
     </section>
     <footer class="pie">
         <section>
             <!--en esta seccion van los logos de las redes-->
-            <a href=t arget="_blank"><img src="../img/facebook.png" class="pie__redes"></a>
-            <a href=t arget="_blank"><img src="../img/twitter.png" class="pie__redes"></a>
-            <a href=t arget="_blank"><img src="../img/instagram.png" class="pie__redes"></a>
+            <a href=t arget="_blank"><img src="img/facebook.png" class="pie__redes"></a>
+            <a href=t arget="_blank"><img src="img/twitter.png" class="pie__redes"></a>
+            <a href=t arget="_blank"><img src="img/instagram.png" class="pie__redes"></a>
         </section>
     </footer>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/miarchivo.js"></script>
 </body>
 
 </html>
