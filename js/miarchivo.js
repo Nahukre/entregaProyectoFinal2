@@ -101,7 +101,7 @@ function crearUsuario(e) {
     let teslaAhorro = division(document.getElementById('ahorro').value, cedearTesla.valor);
 
     let contenedorPersona = document.createElement("div");
-    contenedorPersona.innerHTML = `<h5>Bienvenido: ${usuario.nombre}</h5>
+    contenedorPersona.innerHTML = `<h5>Bienvenido ${usuario.nombre}!</h5>
                                         <h5>\nSu porcentaje de ahorro mensual es del ${ahorroPorcentaje}%.</h5> 
                                         <h5>\nSu ahorro anual es de $${ahorroAnual}.</h5> 
                                         <h5>\nSi destinara todo su sueldo a comprar su ${usuario.objetivo} tardaría ${mesesDeAhorro} meses o ${sueldoAños} años para comprar lo que desea.</h5> 
