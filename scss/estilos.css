@@ -128,6 +128,7 @@
     min-height: 700px;
     font-family: sans-serif;
     padding-top: 40px;
+    text-align: center;
   }
   table {
     font-family: sans-serif;
@@ -164,8 +165,8 @@
     -ms-grid-columns: 33% 33% 33%;
         grid-template-columns: 33% 33% 33%;
     margin-top: 10px;
-    margin-left: 2%;
     padding-bottom: 30px;
+    margin-left: 3.5%;
   }
   #activo__dolarBlue {
     background-color: rgba(255, 255, 255, 0.5);
@@ -282,14 +283,38 @@
     font-weight: bold;
   }
   #titulo1 {
-    margin-left: 46%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: inline-block;
     font-size: 50px;
     background-color: #548aff;
-    display: inline-block;
     border-radius: 5px;
     padding: 5px;
     border: solid;
     border-color: black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .subtitulo {
+    font-size: 30px;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  .formClass {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   label {
     font-size: 20px;
@@ -373,6 +398,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     line-height: 10px;
+    text-align: left;
   }
   .formularioNovedades {
     margin: 10px;
@@ -394,6 +420,9 @@
   }
   .input-group {
     display: block;
+  }
+  select {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
