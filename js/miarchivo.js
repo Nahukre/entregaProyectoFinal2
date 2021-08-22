@@ -1,4 +1,4 @@
-let miFormulario = document.getElementById("myForm")
+let miFormulario = document.getElementById("myForm");
 
 class persona {
     constructor(nombre, mail, sueldo, ahorro, extra, objetivo, valorBien) {
@@ -312,29 +312,46 @@ ordenarActivos();
 //     }
 //crearTablaDeActivos();
 
-const definirInversor = () => {
-        let cuantoInvierte = parseInt(prompt("Qué porcentaje de sus ahorros invertiría? \n1- Hasta un 10% \n2- Hasta un 20% \n3- Más de un 20 %"));
-        let queHaría = parseInt(prompt("Si un activo que posee se reduce en su valor drasticamente, usted: \n1- Vende el activo \n2- Espera a que suba su precio nuevamente \n3- Compra más aprovechando su menor valor"));
-        let porcentajePerdida = parseInt(prompt("Qué porcentaje de su inversión estaría dispúesto a perder con tal de obtener ganancias? \n1- No está dispuesto a arriesgar sus ahorros \n2- Está dispuesto a arriezgar algo de sus ahorros \n3- Arriezgaría un porcentaje considerable de sus ahorros con miras a obtener ganancias futuras"));
-        let activoConPotencial = parseInt(prompt("Si surge un nuevo activo, con gran potencial de crecimiento, pero con gran riezgo, usted: \n1- No invertiría en ese activo \n2- Invertiría una parte pequeña de su capital en ese activo \n3- Si confía en el activo invertiría sin dudarlo"));
-        let tipoDeInversor = cuantoInvierte + queHaría + porcentajePerdida + activoConPotencial
+let miFormulario2 = document.getElementById("formulario2")
 
-        switch (true) {
-            case (tipoDeInversor >= 4 || tipoDeInversor <= 6):
-                console.log("Usted es un inversor conservador.");
-                break;
-            case (tipoDeInversor >= 7 || tipoDeInversor <= 9):
-                console.log("Usted es un inversor Moderado.");
-                break;
-            case (tipoDeInversor >= 10 || tipoDeInversor <= 12):
-                console.log("Usted es un inversor agresivo.");
-                break;
-            default:
-                console.log("Usted ingresó un dato incorrecto.");
-                break;
-        }
+let buttonSubmitQuizz = document.getElementById('submitButtonQuizz');
+miFormulario2.addEventListener("submit", definirInversor);
+
+function definirInversor(f) {
+    f.preventDefault();
+    let formulario = f.target;
+
+    // let cuantoInvierte = parseInt(prompt("Qué porcentaje de sus ahorros invertiría? \n1- Hasta un 10% \n2- Hasta un 20% \n3- Más de un 20 %"));
+    // let queHaría = parseInt(prompt("Si un activo que posee se reduce en su valor drasticamente, usted: \n1- Vende el activo \n2- Espera a que suba su precio nuevamente \n3- Compra más aprovechando su menor valor"));
+    // let porcentajePerdida = parseInt(prompt("Qué porcentaje de su inversión estaría dispúesto a perder con tal de obtener ganancias? \n1- No está dispuesto a arriesgar sus ahorros \n2- Está dispuesto a arriezgar algo de sus ahorros \n3- Arriezgaría un porcentaje considerable de sus ahorros con miras a obtener ganancias futuras"));
+    // let activoConPotencial = parseInt(prompt("Si surge un nuevo activo, con gran potencial de crecimiento, pero con gran riezgo, usted: \n1- No invertiría en ese activo \n2- Invertiría una parte pequeña de su capital en ese activo \n3- Si confía en el activo invertiría sin dudarlo"));
+    // let tipoDeInversor = cuantoInvierte + queHaría + porcentajePerdida + activoConPotencial
+
+    let porcentajeDeAhorro = parseInt(document.querySelector('input[name="porcentajeDeAhorro"]:checked').value);
+    let reduccionDeActivo = parseInt(document.querySelector('input[name="reduccionDeActivo"]:checked').value);
+    let gananciaEsperada = parseInt(document.querySelector('input[name="gananciaEsperada"]:checked').value);
+    let nuevoActivo = parseInt(document.querySelector('input[name="nuevoActivo"]:checked').value);
+    let SumaQuizz = porcentajeDeAhorro + reduccionDeActivo + gananciaEsperada + nuevoActivo;
+    console.log(SumaQuizz);
+    switch (true) {
+        case (SumaQuizz <= 4 || SumaQuizz <= 6):
+            let contenedorTipoInversorConservador = document.createElement("div");
+            contenedorTipoInversorConservador.innerHTML = `<h5>\nUsted es un inversor conservador.</h>`;
+            document.body.appendChild(contenedorTipoInversorConservador);
+            break;
+        case (SumaQuizz <= 7 || SumaQuizz <= 9):
+            let contenedorTipoInversorModerado = document.createElement("div");
+            contenedorTipoInversorModerado.innerHTML = `<h5>\nUsted es un inversor Moderado.</h>`;
+            document.body.appendChild(contenedorTipoInversorModerado);
+            break;
+        case (SumaQuizz >= 10 || SumaQuizz <= 12):
+            let contenedorTipoInversorAgresivo = document.createElement("div");
+            contenedorTipoInversorAgresivo.innerHTML = `<h5>\nUsted es un inversor agresivo.</h>`;
+            document.body.appendChild(contenedorTipoInversorAgresivo);
+            break;
     }
-    ///definirInversor();
+}
+definirInversor();
 
 const mostrarTipoDeInversor = () => {
         let contenedorTipoDeInversor = document.createElement("div");

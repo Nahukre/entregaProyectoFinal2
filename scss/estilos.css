@@ -110,9 +110,8 @@
     position: relative;
     display: inline-block;
   }
-  li:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+  li li.item {
+    margin-bottom: 10px;
   }
   a {
     /* esta etiqueta corresponde a los link dentro del menu*/
@@ -247,9 +246,6 @@
   .card-group {
     margin-top: 10px;
   }
-  li.item {
-    margin-bottom: 10px;
-  }
   img.pie__redes {
     width: 30px;
     height: 30px;
@@ -275,8 +271,25 @@
     padding: 5px;
     font-weight: bold;
   }
+  #submitButtonQuizz {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+  }
   .papa {
     font-weight: bold;
+  }
+  #titulo1 {
+    margin-left: 46%;
+    font-size: 50px;
+    background-color: #548aff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+    border: solid;
+    border-color: black;
   }
   label {
     font-size: 20px;
@@ -293,9 +306,21 @@
     margin-right: 5px;
     border-radius: 5px;
   }
+  .liQuizz {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .liQuizz:focus {
+    -webkit-transform: scale(none);
+            transform: scale(none);
+  }
   fieldset {
     margin-top: 10px;
     margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 5px;
     padding-bottom: 0px;
     padding-top: 20px;
@@ -366,6 +391,9 @@
     border-radius: 5px;
     margin-left: -20px;
     padding: 2px;
+  }
+  .input-group {
+    display: block;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

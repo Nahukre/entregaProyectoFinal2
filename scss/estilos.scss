@@ -105,8 +105,8 @@ $color-celeste: #548aff;
     li {
         position: relative;
         display: inline-block;
-        &:hover {
-            transform: scale(1.1)
+        li.item {
+            margin-bottom: 10px;
         }
     }
     a {
@@ -234,9 +234,6 @@ $color-celeste: #548aff;
     .card-group {
         margin-top: 10px;
     }
-    li.item {
-        margin-bottom: 10px;
-    }
     img.pie__redes {
         width: 30px;
         height: 30px;
@@ -262,8 +259,25 @@ $color-celeste: #548aff;
         padding: 5px;
         font-weight: bold;
     }
+    #submitButtonQuizz {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+    }
     .papa {
         font-weight: bold;
+    }
+    #titulo1 {
+        margin-left: 46%;
+        font-size: 50px;
+        background-color: $color-celeste;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 5px;
+        border: solid;
+        border-color: black;
     }
     label {
         font-size: 20px;
@@ -280,9 +294,20 @@ $color-celeste: #548aff;
         margin-right: 5px;
         border-radius: 5px;
     }
+    .liQuizz {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 5px;
+        padding: 2px;
+        border-radius: 5px;
+        &:focus {
+            transform: scale(none);
+        }
+    }
     fieldset {
         margin-top: 10px;
         margin-bottom: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
         border-radius: 5px;
         padding-bottom: 0px;
         padding-top: 20px;
@@ -347,5 +372,8 @@ $color-celeste: #548aff;
         border-radius: 5px;
         margin-left: -20px;
         padding: 2px;
+    }
+    .input-group {
+        display: block;
     }
 }
