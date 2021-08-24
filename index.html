@@ -49,19 +49,19 @@
                 <div class="carousel-item active">
                     <img src="img/dolar.jpg" class="d-block w-100" alt="foto de actores bailando" id="foto__curso" width="100px" height="500px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="actuacion__titulo">DOLAR</h5>
+                        <h5 class="carousel__titulo">Ahorrar se conoce como guardar dinero del presente para gastar en el futuro.</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/bolsa.jpg" class="d-block w-100" alt="foto de profesora en las butacas del teatro" id="foto__curso" width="100px" height="500px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="dramaturgia__titulo">ACCIONES</h5>
+                        <h5 class="carousel__titulo">Invertir es cuando se gasta dinero o se entrega un bien a cambio de algo que genere una rentabilidad periódicamente.</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/bitcoin.jpg" class="d-block w-100" alt="foto de actores leyendo un libreto" id="foto__curso" width="100px" height="500px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="direccion__titulo">CRIPTOMONEDAS</h5>
+                        <h5 class="carousel__titulo">La diferencia entre ahorrar o invertir es la rentabilidad que la inversión genera, pues el ahorro es un método que sirve para estar preparado para emergencias, solventar gastos inesperados o cumplir metas para sueños personales.</h5>
                     </div>
                 </div>
             </div>
@@ -75,9 +75,15 @@
             </button>
         </div>
         </div>
-        <div class="formClass">
+        <section id="contenedor">
+            <a id="contenedor__link" href="javascript:abrirFormulario()">¿Cuánto tardo en comprarme lo que quiero?</a>
+        </section>
+        <div class="formClass" id="formIdBis">
             <form id="myForm">
-                <h2 class="subtitulo">¿Cuanto tardo en comprarme lo que quiero?</h2>
+                <div id="cerrarFormulario">
+                    <a href="javascript:cerrarFormulario()"><img src="img/marca-x.svg" id="foto__cerrar"></a>
+                </div>
+                <h2 class="subtitulo">¿Cuánto tardo en comprarme lo que quiero?</h2>
                 <div class="input-group">
                     <label>Nombre: </label>
                     <input type="text" id="nombre" />
@@ -112,10 +118,16 @@
                 </div>
             </form>
         </div>
+        <section id="contenedor">
+            <a id="contenedor__link" href="javascript:abrir()">¿Qué tipo de inversor soy?</a>
+        </section>
 
-        <div class="formClass">
+        <div class="formClass" id="formId">
+            <div id="cerrar">
+                <a href="javascript:cerrar()"><img src="img/marca-x.svg" id="foto__cerrar"></a>
+            </div>
             <form id="formulario2">
-                <h2 class="subtitulo">¿Qué tipo de inversor es?</h2>
+                <h2 class="subtitulo">¿Qué tipo de inversor soy?</h2>
                 <div class="input-group">
                     <label>Qué porcentaje de sus ahorros invertiría en diferentes activos?</label>
                     <ul>
