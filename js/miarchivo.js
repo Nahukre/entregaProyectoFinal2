@@ -61,6 +61,8 @@ function crearUsuario(e) {
     let tiempoTotal = division(valorBienIngresado, (suma(extraIngresado, ahorroAnual)));
     // let tiempoPlus = division(valorBienIngresado, multiplicacion(ahorroAnual, 1.1));
 
+    let cuantoTardo = document.getElementById("cuantoTardo");
+
     switch (true) {
         case (ahorroPorcentaje <= 5):
             let contenedorPorcentajeAhorro1 = document.createElement("div");
@@ -72,7 +74,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro1);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro1);
             break;
         case ((ahorroPorcentaje > 5) && (ahorroPorcentaje <= 10)):
             let contenedorPorcentajeAhorro2 = document.createElement("div");
@@ -83,7 +85,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro2);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro2);
             break;
         case ((ahorroPorcentaje > 10) && (ahorroPorcentaje <= 20)):
             let contenedorPorcentajeAhorro3 = document.createElement("div");
@@ -95,7 +97,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro3);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro3);
             break;
         case ((ahorroPorcentaje > 20) && (ahorroPorcentaje <= 50)):
             let contenedorPorcentajeAhorro4 = document.createElement("div");
@@ -107,7 +109,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro4);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro4);
             break;
         case (ahorroPorcentaje > 50):
             let contenedorPorcentajeAhorro5 = document.createElement("div");
@@ -119,7 +121,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro5);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro5);
             break;
         default:
             let contenedorPorcentajeAhorro6 = document.createElement("div");
@@ -131,7 +133,7 @@ function crearUsuario(e) {
             <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
             <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-            document.body.appendChild(contenedorPorcentajeAhorro6);
+            cuantoTardo.appendChild(contenedorPorcentajeAhorro6);
             break;
     }
 
@@ -142,78 +144,51 @@ function crearUsuario(e) {
     let teslaAhorro = division(document.getElementById('ahorro').value, cedearTesla.valor);
     let oroAhorro = division(document.getElementById('ahorro').value, oro.valor);
 
-    // let contenedorPersona = document.createElement("div");
-    // contenedorPersona.classList.add('operacionOpciones');
-    // contenedorPersona.innerHTML = `<h5>Hola ${usuario.nombre}!</h5>
-    //                                     <h5>\nSu porcentaje de ahorro mensual es del ${ahorroPorcentaje.toFixed(2)}%.</h5> 
-    //                                     <h5>\nSu ahorro anual es de $${ahorroAnual}.</h5> 
-    //                                     <h5>\nSi destinara todo su sueldo a comprar su ${usuario.objetivo} tardaría ${mesesDeAhorro.toFixed(2)} meses o ${sueldoAños.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nValor del Bien: $${usuario.valorBien}<h5>`;
-    // document.body.appendChild(contenedorPersona);
-
-    // let contenedorPersona = document.createElement("div");
-    // contenedorPersona.classList.add('operacionOpciones');
-    // contenedorPersona.innerHTML = `<div id="resueltadoFinanciero"><h3>Hola ${usuario.nombre}!</h3>
-    //                                     <h5>\nSu porcentaje de ahorro mensual es del ${ahorroPorcentaje.toFixed(2)}%.</h5> 
-    //                                     <h5>\nSu ahorro anual es de $${ahorroAnual}.</h5> 
-    //                                     <h5>\nSi destinara todo su sueldo a comprar su ${usuario.objetivo} tardaría ${mesesDeAhorro.toFixed(2)} meses o ${sueldoAños.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nSi destinara solo su ahorro mensual a comprar su ${usuario.objetivo} tardaría ${ahorroReal.toFixed(2)} meses o ${ahorroAños.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nSi destinara su ahorro anual más sus ingresos extra anuales a comprar su ${usuario.objetivo} tardaría ${tiempoTotal.toFixed(2)} años para comprar lo que desea.</h5> 
-    //                                     <h5>\nValor del Bien: $${usuario.valorBien}<h5></div>`;
-    // document.body.appendChild(contenedorPersona);
-
-
-    // for (const inversiones of nacional.activo) {
-    //     let contenedor = document.createElement("div");
-    //     contenedor.classList.add('operacionOpciones');
-    //     contenedor.innerHTML = `<table class="tabla"><tr> Activo: ${inversiones.denominacion}</tr>  <tr>  Moneda: ${inversiones.moneda}</tr>  <tr> Valor: $${inversiones.valor}</tr></table>`;
-    //     document.body.appendChild(contenedor);
-    // }
-
-    // let contenedorActivos = document.createElement("div");
-    // contenedorActivos.classList.add('operacionOpciones');
-    // contenedorActivos.innerHTML = `<h5 class="opciones">Sus opciones de inversión inmediata son:</h5>
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${dolarBlueAhorro.toFixed(2)} dólares blue.</h5> 
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${bitcoinAhorro.toFixed(2)} bitcoins.</h5> 
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${appleAhorro.toFixed(2)} cedears de Apple.</h5> 
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${amazonAhorro.toFixed(2)} cedears de Amazon.</h5> 
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${teslaAhorro.toFixed(2)} cedears de Tesla.</h5>
-    //                                         <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${oroAhorro.toFixed(2)} kilos de oro.</h5>`;
-    // document.body.appendChild(contenedorActivos);
+    // let mostrarCardActivos = document.getElementById("cardActivos");
 
     //trabajo eventos complementario crear cards
-    let cardActivos = document.createElement("section");
-    cardActivos.classList.add('activo');
-    cardActivos.innerHTML = `<div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${dolarBlue.denominacion}</h2>
-    <img class="activo__foto" src="img/dolar.jpg" alt="foto de dolar">
-    <p class="activo__info">${dolarBlue.descripcion}</p><p class="activo__valor">Valor: $${dolarBlue.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${dolarBlueAhorro.toFixed(2)} dólares blue.</h5> 
-    </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${bitcoin.denominacion}</h2>
-    <img class="activo__foto" src="img/bitcoin.jpg" alt="foto de bitcoin">
-    <p class="activo__info">${bitcoin.descripcion}</p><p class="activo__valor">Valor: U$S${bitcoin.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${bitcoinAhorro.toFixed(2)} bitcoins.</h5> 
-    </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${oro.denominacion}</h2>
-    <img class="activo__foto" src="img/oro.jpg" alt="foto de tesla">
-    <p class="activo__info">${oro.descripcion}</p><p class="activo__valor">Valor: $${oro.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${oroAhorro.toFixed(2)} kilos de oro.</h5></div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearAmazon.denominacion}</h2>
-    <img class="activo__foto" src="img/amazon.jpg" alt="foto de amazon">
-    <p class="activo__info">${cedearAmazon.descripcion}</p><p class="activo__valor">Valor: $${cedearAmazon.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${amazonAhorro.toFixed(2)} cedears de Amazon.</h5>
-    </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearApple.denominacion}</h2>
-    <img class="activo__foto" src="img/apple.jpg" alt="foto de apple">
-    <p class="activo__info">${cedearApple.descripcion}</p><p class="activo__valor">Valor: $${cedearApple.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${appleAhorro.toFixed(2)} cedears de Apple.</h5> 
-    </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearTesla.denominacion}</h2>
-    <img class="activo__foto" src="img/tesla.png" alt="foto de tesla">
-    <p class="activo__info">${cedearTesla.descripcion}</p><p class="activo__valor">Valor: $${cedearTesla.valor}</p> <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${teslaAhorro.toFixed(2)} cedears de Tesla.</h5></div>`;
-    document.body.appendChild(cardActivos);
+    // let cardActivos = document.createElement("section");
+    // cardActivos.classList.add('activo');
+    // cardActivos.innerHTML = `<div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${dolarBlue.denominacion}</h2>
+    // <img class="activo__foto" src="img/dolar.jpg" alt="foto de dolar">
+    // <p class="activo__info">${dolarBlue.descripcion}</p><p class="activo__valor">Valor: $${dolarBlue.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${dolarBlueAhorro.toFixed(2)} dólares blue.</h5> 
+    // </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${bitcoin.denominacion}</h2>
+    // <img class="activo__foto" src="img/bitcoin.jpg" alt="foto de bitcoin">
+    // <p class="activo__info">${bitcoin.descripcion}</p><p class="activo__valor">Valor: U$S${bitcoin.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${bitcoinAhorro.toFixed(2)} bitcoins.</h5> 
+    // </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${oro.denominacion}</h2>
+    // <img class="activo__foto" src="img/oro.jpg" alt="foto de tesla">
+    // <p class="activo__info">${oro.descripcion}</p><p class="activo__valor">Valor: $${oro.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${oroAhorro.toFixed(2)} kilos de oro.</h5></div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearAmazon.denominacion}</h2>
+    // <img class="activo__foto" src="img/amazon.jpg" alt="foto de amazon">
+    // <p class="activo__info">${cedearAmazon.descripcion}</p><p class="activo__valor">Valor: $${cedearAmazon.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${amazonAhorro.toFixed(2)} cedears de Amazon.</h5>
+    // </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearApple.denominacion}</h2>
+    // <img class="activo__foto" src="img/apple.jpg" alt="foto de apple">
+    // <p class="activo__info">${cedearApple.descripcion}</p><p class="activo__valor">Valor: $${cedearApple.valor}</p><h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${appleAhorro.toFixed(2)} cedears de Apple.</h5> 
+    // </div> <div class="activo__dolarBlue"><h2 class="dolarBlue__nombre">${cedearTesla.denominacion}</h2>
+    // <img class="activo__foto" src="img/tesla.png" alt="foto de tesla">
+    // <p class="activo__info">${cedearTesla.descripcion}</p><p class="activo__valor">Valor: $${cedearTesla.valor}</p> <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${teslaAhorro.toFixed(2)} cedears de Tesla.</h5></div>`;
+    // document.body.appendChild(cardActivos);
+    // mostrarCardActivos.appendChild(cardActivos);
 
     // for (const inversiones of nacional.activo) {
     //     let tarjetaActivos = document.createElement("section");
     //     tarjetaActivos.classList.add('activos__tarjetas');
     //     tarjetaActivos.innerHTML = `<div id="activo__tarjeta"><h2 class="tarjeta__nombre">${inversiones.denominacion}</h2>
     //     <img class="tarjeta__foto" src="img/oro.jpg" alt="foto de bitcoin" width= "100px" height= "100px">
-    //     <p class="tarjeta__info">${inversiones.descripcion}</p>
+    //     <p class="tarjeta__info">${inversiones.descripcion}</p><p class="activo__valor">Valor: $${cedearTesla.valor}</p> <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${inversiones.valor.toFixed(2)} cedears de Tesla.</h5>
     //     </div>`;
     //     document.body.appendChild(tarjetaActivos);
     // }
+
+    for (const inversiones of nacional.activo) {
+        $("#card").append(`<div class= "activo__dolarBlue"><h2 class="dolarBlue__nombre">${inversiones.denominacion}</h2>
+        <img class="activo__foto" src="${inversiones.foto}" alt="foto de bitcoin" width= "100px" height= "100px">
+        <p class="activo__info">${inversiones.descripcion}</p><p class="activo__valor">Valor: $${inversiones.valor}</p>
+        <h5 class="opciones">\nUsted podría comprar con su ahorro mensual ${division(ahorroIngresado, inversiones.valor).toFixed(2)} ${inversiones.denominacion}.</h5></div>`);
+
+    }
+
+
+
     document.getElementById("formIdBis").style.display = "none";
 };
 
@@ -223,11 +198,12 @@ function crearUsuario(e) {
 
 // array
 class Inversion {
-    constructor(denominacion, moneda, valor, descripcion) {
+    constructor(denominacion, moneda, valor, descripcion, foto) {
         this.denominacion = denominacion;
         this.moneda = moneda;
         this.valor = valor;
         this.descripcion = descripcion;
+        this.foto = foto;
     }
 }
 class activoDeInversion {
@@ -240,12 +216,12 @@ class activoDeInversion {
 }
 
 let nacional = new activoDeInversion("Activos dentro del mercado local con los cuales poder ahorrar");
-let dolarBlue = new Inversion("Dolar blue", "peso", 170, "El Dólar Blue es el dólar que se consigue en el mercado negro o mercado paralelo. La cotización o valor del Dólar Blue hoy generalmente es superior a la cotización del dólar oficial y suele aumentar a medida que aumenta el control de cambios o se incrementan las restricciones para la compra de dólares al precio oficial.");
-let bitcoin = new Inversion("Bitcoin", "dolar", 35000, "Bitcoin es una moneda virtual o criptomoneda que se utiliza como medio de intercambio electrónico que sirve para adquirir productos y servicios como cualquier otra moneda. Pero esta moneda es descentralizada, es decir que no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos.");
-let cedearTesla = new Inversion("Testa cedear", "peso", 7500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Tesla. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.");
-let cedearApple = new Inversion("Apple cedear", "peso", 3500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Apple. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.");
-let cedearAmazon = new Inversion("Amazon cedear", "peso", 4500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Amazon. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.");
-let oro = new Inversion("Oro", "peso", 5570000, "El oro es un metal precioso utilizado como reserva de valor. Se caracteriza por tener poca variación en su cotización y ser resguardo de valor en epocas de inflación. El interés por las materias primas parece que está en auge y hay buenos catalizadores que pueden mantener esta dinámica creciente.");
+let dolarBlue = new Inversion("Dolar blue", "peso", 170, "El Dólar Blue es el dólar que se consigue en el mercado negro o mercado paralelo. La cotización o valor del Dólar Blue hoy generalmente es superior a la cotización del dólar oficial y suele aumentar a medida que aumenta el control de cambios o se incrementan las restricciones para la compra de dólares al precio oficial.", "../img/dolar.jpg");
+let bitcoin = new Inversion("Bitcoin", "peso", 8300000, "Bitcoin es una moneda virtual o criptomoneda que se utiliza como medio de intercambio electrónico que sirve para adquirir productos y servicios como cualquier otra moneda. Pero esta moneda es descentralizada, es decir que no existe una autoridad o ente de control que sea responsable de su emisión y registro de sus movimientos.", "../img/bitcoin.jpg");
+let cedearTesla = new Inversion("Tesla cedear", "peso", 7500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Tesla. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.", "../img/tesla.png");
+let cedearApple = new Inversion("Apple cedear", "peso", 3500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Apple. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.", "../img/apple.jpg");
+let cedearAmazon = new Inversion("Amazon cedear", "peso", 4500, "Cedears  (Certificados de Depósito Argentinos) de la compañia Amazon. Activo financiero atado al dolar y a la valuación de la empresa en el mercado.", "../img/amazon.jpg");
+let oro = new Inversion("Oro", "peso", 5570000, "El oro es un metal precioso utilizado como reserva de valor. Se caracteriza por tener poca variación en su cotización y ser resguardo de valor en epocas de inflación. El interés por las materias primas parece que está en auge y hay buenos catalizadores que pueden mantener esta dinámica creciente.", "../img/oro.jpg");
 
 nacional.agregarInversion(dolarBlue);
 nacional.agregarInversion(bitcoin);
@@ -300,21 +276,24 @@ function definirInversor(f) {
     let nuevoActivo = parseInt(document.querySelector('input[name="nuevoActivo"]:checked').value);
     let SumaQuizz = porcentajeDeAhorro + reduccionDeActivo + gananciaEsperada + nuevoActivo;
     console.log(SumaQuizz);
+
+    let tipoInversor = document.getElementById("tipoInversor");
+
     switch (true) {
         case (SumaQuizz <= 4 || SumaQuizz <= 6):
             let contenedorTipoInversorConservador = document.createElement("div");
             contenedorTipoInversorConservador.innerHTML = `<h5 class="operacionOpcion">\nUsted es un inversor conservador.</h>`;
-            document.body.appendChild(contenedorTipoInversorConservador);
+            tipoInversor.appendChild(contenedorTipoInversorConservador);
             break;
         case (SumaQuizz <= 7 || SumaQuizz <= 9):
             let contenedorTipoInversorModerado = document.createElement("div");
             contenedorTipoInversorModerado.innerHTML = `<h5 class="operacionOpcion">\nUsted es un inversor Moderado.</h>`;
-            document.body.appendChild(contenedorTipoInversorModerado);
+            tipoInversor.appendChild(contenedorTipoInversorModerado);
             break;
         case (SumaQuizz >= 10 || SumaQuizz <= 12):
             let contenedorTipoInversorAgresivo = document.createElement("div");
             contenedorTipoInversorAgresivo.innerHTML = `<h5 class="operacionOpcion">\nUsted es un inversor agresivo.</h>`;
-            document.body.appendChild(contenedorTipoInversorAgresivo);
+            tipoInversor.appendChild(contenedorTipoInversorAgresivo);
             break;
     }
     document.getElementById("formId").style.display = "none";
